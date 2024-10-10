@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kocham Cie Alicja</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Parisienne', cursive;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8b195, #f67280, #c06c84);
+            background-size: 300% 300%;
+            animation: gradient 15s ease infinite;
+            position: relative; /* Dodano do obsługi serc w tle */
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Zapewnia, że tekst jest nad sercami */
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 216px; /* Powiększony tekst o 20% (180px + 20%) */
+            color: red; /* Zmieniono kolor na czerwony */
+            margin: 0;
+            text-shadow: 8px 8px 16px rgba(0, 0, 0, 0.4); /* Zwiększony cień */
+        }
+
+        h2 {
+            font-family: 'Parisienne', cursive;
+            font-size: 144px; /* Powiększony tekst o 20% (120px + 20%) */
+            color: #B53471; /* Pasujący kolor dla Alicji */
+            margin: 20px 0 0;
+            text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4); /* Zwiększony cień */
+        }
+
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle, rgba(255, 111, 97, 0.2) 30%, transparent 30%),
+                              radial-gradient(circle, rgba(255, 111, 97, 0.2) 30%, transparent 30%),
+                              radial-gradient(circle, rgba(255, 111, 97, 0.2) 30%, transparent 30%);
+            background-size: 200px 200px;
+            opacity: 0.5; /* Półprzezroczystość */
+            pointer-events: none; /* Unikaj interakcji z wzorem */
+            z-index: 0; /* Upewnij się, że serca są pod tekstem */
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px; /* Odstęp od góry */
+            left: 1000px; /* Ustaw na 0, aby zdjęcie było na krawędzi lewej */
+            width: 400px; /* Powiększ zdjęcie */
+            height: auto; /* Zachowaj proporcje */
+        }
+
+        .logo2 {
+            position: absolute;
+            top: 250px; /* Ustaw na 20px lub inną wartość, aby dostosować położenie */
+            left:0px; /* Ustaw w odpowiedniej pozycji, np. 160px od lewej */
+            width: 250px; /* Powiększ zdjęcie */
+            height: auto; /* Zachowaj proporcje */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="1.jpeg" alt="KOCHAM" class="logo"> <!-- Użyj odpowiedniego adresu URL -->
+        <img src="2.jpeg" alt="KOCHAM zdjęcia" class="logo2"> <!-- Użyj odpowiedniego adresu URL -->
+        <div class="hearts"></div>
+        <h1>Kocham Cie</h1>
+        <h2>Alicja</h2>
+    </div>
+</body>
+</html>
